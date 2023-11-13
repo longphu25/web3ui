@@ -1,4 +1,6 @@
 import { loader } from '@monaco-editor/react'
+// https://github.com/suren-atoyan/monaco-react/discussions/201
+// import 'monaco-themes/themes/Monokai Bright.json'
 import monacoThemesJson from 'monaco-themes/themes/themelist.json'
 
 interface MonacoThemes {
