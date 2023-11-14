@@ -22,11 +22,11 @@ const CodeEditorWindow: React.FC<CodeEditorWindowProps> = ({ onChange, language,
     monaco?.languages.typescript.javascriptDefaults.setEagerModelSync(true)
     if (monaco) {
       // console.log("here is the monaco isntance:", monaco);
-      import('monaco-themes/themes/Monokai Bright.json')
-        .then((themeData) => {
-          monaco.editor.defineTheme('monokai-bright', themeData)
-        })
-        .then((_) => monaco.editor.setTheme('monokai-bright'))
+      // import('monaco-themes/themes/Monokai Bright.json')
+      //   .then((themeData) => {
+      //     monaco.editor.defineTheme('monokai-bright', themeData)
+      //   })
+      //   .then((_) => monaco.editor.setTheme('monokai-bright'))
       // monaco.editor.defineTheme("monokai-bright").then(_ => monaco.editor.setMonacoTheme("monokai-bright"));
     }
   }, [monaco])

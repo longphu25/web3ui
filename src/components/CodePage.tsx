@@ -10,37 +10,15 @@ const typescriptDefault: string = `import { Contract } from '@algorandfoundation
 
 // eslint-disable-next-line no-unused-vars
 class Runner extends Contract {
-  /**
-   * Calculates the sum of two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The sum of a and b
-   */
+
   private getSum(a: number, b: number): number {
     return a + b;
   }
 
-  /**
-   * Calculates the difference between two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The difference between a and b.
-   */
   private getDifference(a: number, b: number): number {
     return a >= b ? a - b : b - a;
   }
 
-  /**
-   * A method that takes two numbers and does either addition or subtraction
-   *
-   * @param a The first number
-   * @param b The second number
-   * @param operation The operation to perform. Can be either 'sum' or 'difference'
-   *
-   * @returns The result of the operation
-   */
   doMath(a: number, b: number, operation: string): number {
     let result: number;
 
@@ -97,19 +75,19 @@ describe('Runner', () => {
 });
 
 `
+interface outputDetails {
+  status: number
+  message: string
+  output: string
+  error: string
+}
 
 const CodePage: React.FC = () => {
   const [theme, setTheme] = useState<{ value: string; label: string }>({ value: 'vs-dark', label: 'VS Dark' })
   const [code, setCode] = useState<string>(typescriptDefault)
   const [codeTest, setCodeTest] = useState<string>(typescriptTest)
   const [customInput, setCustomInput] = useState<string>('')
-  const [outputDetails, setOutputDetails] = useState<{
-    status: {
-      description: string
-    }
-    memory: string
-    time: string
-  } | null>(null)
+  const [outputDetails, setOutputDetails] = useState<outputDetails>({ status: 1, message: '', output: '', error: '' })
   const [processing, setProcessing] = useState<boolean | null>(null)
   const [language, setLanguage] = useState<{ value: string; label: string }>({ value: 'typescript', label: 'Typescript' })
 
