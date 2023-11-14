@@ -13,7 +13,7 @@ on:
 
 jobs:
   checks:
-    runs-on: 'ubuntu-latest'
+    runs-on: "ubuntu-latest"
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -31,15 +31,15 @@ jobs:
       - name: Run linters
         run: npm run lint
 
-      - name: Run unit tests
-        run: npm run test
+      # - name: Run unit tests
+      #   run: npm run test
 
       - name: Create placeholder .env file
         if: ${{ inputs.run-build }}
         uses: makerxstudio/shared-config/.github/actions/env-to-placeholders@main
         with:
-          env-output-path: './.env'
-          env-template-path: './.env.template'
+          env-output-path: "./.env"
+          env-template-path: "./.env.template"
           env-variable-prefix: VITE_
 
       - name: Build

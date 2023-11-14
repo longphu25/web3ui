@@ -10,16 +10,6 @@ interface OutputDetailsProps {
   }
 }
 
-interface OutputDetailsProps {
-  outputDetails: {
-    status: {
-      description: string
-    }
-    memory: string
-    time: string
-  }
-}
-
 const OutputDetails: FC<OutputDetailsProps> = ({ outputDetails }) => {
   return (
     <div className="metrics-container mt-4 flex flex-col space-y-3">

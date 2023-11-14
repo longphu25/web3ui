@@ -103,7 +103,13 @@ const CodePage: React.FC = () => {
   const [code, setCode] = useState<string>(typescriptDefault)
   const [codeTest, setCodeTest] = useState<string>(typescriptTest)
   const [customInput, setCustomInput] = useState<string>('')
-  const [outputDetails, setOutputDetails] = useState<any>(null)
+  const [outputDetails, setOutputDetails] = useState<{
+    status: {
+      description: string
+    }
+    memory: string
+    time: string
+  } | null>(null)
   const [processing, setProcessing] = useState<boolean | null>(null)
   const [language, setLanguage] = useState<{ value: string; label: string }>({ value: 'typescript', label: 'Typescript' })
 
@@ -178,6 +184,9 @@ const CodePage: React.FC = () => {
 
   useEffect(() => {
     // defineTheme('dracula').then(() => setTheme({ value: 'dracula', label: 'Dracula' }))
+    setTheme({ value: 'dracula', label: 'Dracula' })
+    setCustomInput('')
+    setLanguage({ value: 'typescript', label: 'Typescript' })
   }, [])
 
   const showSuccessToast = (msg?: string): void => {
