@@ -125,7 +125,7 @@ const CodePage: React.FC = () => {
     }
     const options = {
       method: 'POST',
-      url: 'http://178.63.14.81:21558/api/v1/execute-code-test',
+      url: 'https://178.63.14.81:21558/api/v1/execute-code-test',
       // params: { base64_encoded: 'false', fields: '*' },
       headers: {
         'content-type': 'application/json',
