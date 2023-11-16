@@ -1,82 +1,45 @@
-# web3ui
+### Vision
 
-This starter React project has been generated using AlgoKit. See below for default getting started instructions.
+Make learning smart contracts on Algorand more fun and efficient.
 
-# Setup
+### Description
 
-### Initial setup
+# AlgoPlayground: Transformative Blockchain Coding Education Through AlgoPlayground
 
-1. Clone this repository locally
-2. Install pre-requisites:
-   - Make sure to have [Docker](https://www.docker.com/) installed and running on your machine.
-   - Install `AlgoKit` - [Link](https://github.com/algorandfoundation/algokit-cli#install): The minimum required version is `1.1`. Ensure you can execute `algokit --version` and get `1.1` or later.
-   - Bootstrap your local environment; run `algokit bootstrap all` within this folder, which will run `npm install` to install NPM packages and dependencies for your frontend component/webapp.
-   - Run `algokit localnet start` to start a local Algorand network in Docker. If you are using VS Code launch configurations provided by the template, this will be done automatically for you.
-3. Open the project and start debugging / developing via:
-   - VS Code
-     1. Open the repository root in VS Code
-     2. Install recommended extensions
-     3. Hit F5 (or whatever you have debug mapped to) and it should start running with breakpoint debugging.
-   - JetBrains WebStorm
-     1. Open the repository root in WebStorm
-     2. Hit Shift+F10|Ctrl+R (or whatever you have debug mapped to). Then Shift+CMD|Ctrl+Click on the link in the console to open the browser with debugger attached.
-   - Other
-     1. Open the repository root in your text editor of choice
-     2. In a terminal run `npm run dev`
+## Harnessing the Thrill of Gamified Learning
 
-### Subsequently
+In the thrilling world of competitive programming, our protagonist unearthed the immense power of gamification in the realm of education. Transforming coding into a game-like experience not only injected fun into learning but also proved remarkably effective. This revelation sparked a pivotal question: Could this thrilling approach be applied to the intricate domain of blockchain and smart contract coding?
 
-1. If you update to the latest source code and there are new dependencies you will need to run `algokit bootstrap all` again
-2. Follow step 3 above
+## Enter AlgoPlayground: A Journey into Web3 Education
 
-> Please note, by default frontend is pre configured to run against Algorand LocalNet. If you want to run against TestNet or MainNet, comment out the current environment variable and uncomment the relevant one in [`.env`](.env) file that is created after running bootstrap command and based on [`.env.template`](.env.template).
+Thus, AlgoPlayground was conceived—a dynamic and interactive coding platform meticulously tailored for blockchain coding enthusiasts. This innovative platform hosts a rich tapestry of challenges, carefully curated for users to explore and conquer at their own pace. Dive headfirst into the coding environment and explore the conquered challenges to enhance your skills.
 
-### Continuous Integration
+## The Elegance of Code Crafting and Execution
 
-This project uses [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) to define CI workflows, which are located in the [`.github/workflows`](./.github/workflows) folder.
+At the heart of AlgoPlayground lies its seamless code writing and execution process. Users can craft and run code directly within the platform, receiving instant feedback for rapid learning and mastery.
 
-For pull requests and pushes to `main` branch against this repository the following checks are automatically performed by GitHub Actions:
+## Central to AlgoPlayground: Gamification and Community Empowerment
 
-- `install`: Installs dependencies using `npm`
-- `lint`: Lints the codebase using `ESLint`
-- `build`: Builds the codebase using `vite`
+AlgoPlayground thrives on its unique gamification approach. Earn experience points (EXP) by conquering challenges, allowing you to ascend through levels and continually enhance your skills. This gamified learning structure not only fosters consistent improvement but also celebrates your achievements along the way.
 
-### Continuous Deployment
+AlgoPlayground is gearing up to introduce a 'Learn to Earn' feature, rewarding developers with tokens upon challenge completion. Moreover, successful conquerors of all challenges will receive exclusive NFT certificates, marking their triumphs on the platform.
 
-The project template provides base Github Actions workflows for continuous deployment to [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/). These workflows are located in the [`.github/workflows`](./.github/workflows) folder.
+## Cultivating a Collaborative Ecosystem
 
-> Please note: when configuring the github repository for the first time. Depending on selected provider you will need to set the provider secrets in the repository settings. For netlify you can pass the project specific environment variables as part of Github actions secrets, while for vercel you will need to set the secrets on your site instance (refer to the [Vercel documentation](https://vercel.com/docs/cli#commands/secrets) for more details).
+AlgoPlayground is more than just a coding platform; it's a vibrant community-driven initiative. Embracing an open-source ethos, it welcomes contributions from diverse coding spheres. Engage in Q&A sessions, propose challenges, and suggest enhancements to actively shape the platform's evolution.
 
-# Algorand Wallet integrations
+Community engagement is further enriched through a Discord bot, broadcasting platform activities, fostering a sense of camaraderie and active participation.
 
-The template comes with [`use-wallet`](https://github.com/txnlab/use-wallet) integration, which provides a React hook for connecting to an Algorand wallet providers. The following wallet providers are included by default:
-- LocalNet:
-- - [KMD/Local Wallet](https://github.com/TxnLab/use-wallet#kmd-algorand-key-management-daemon) - Algorand's Key Management Daemon (KMD) is a service that manages Algorand private keys and signs transactions. Works best with AlgoKit LocalNet and allows you to easily test and interact with your dApps locally.
-- TestNet and others:
-- - [Pera Wallet](https://perawallet.app).
-- - [Defly Wallet](https://defly.app).
-- - [Exodus Wallet](https://www.exodus.com).
-- - [Daffi Wallet](https://www.daffi.me).
+## Unveiling the Technology Tapestry
 
-Refer to official [`use-wallet`](https://github.com/txnlab/use-wallet) documentation for detailed guidelines on how to integrate with other wallet providers (such as WalletConnect v2). Too see implementation details on the use wallet hook and initialization of extra wallet providers refer to [`App.tsx`](./src/App.tsx).
+AlgoPlayground's architecture is a meticulously woven blend of cutting-edge technologies. TypeScript powers the frontend, ensuring a robust and responsive user interface. The backend manages API interactions and leverages backend software to efficiently compile code. MySQL serves as the database, while server-side logic ensures seamless code execution.
 
-# Tools
+AlgoPlayground: Innovating with BOS Applications, a Dynamic Code Editor, Token Rewards, and Exclusive NFT Certificates
 
-This project makes use of React and Tailwind to provider a base project configuration to develop frontends for your Algorand dApps and interactions with smart contracts. The following tools are in use:
+## In Summary
 
-- [AlgoKit Utils](https://github.com/algorandfoundation/algokit-utils-ts) - Various TypeScript utilities to simplify interactions with Algorand and AlgoKit.
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [daisyUI](https://daisyui.com/) - A component library for Tailwind CSS.
-- [use-wallet](https://github.com/txnlab/use-wallet) - A React hook for connecting to an Algorand wallet providers.
-- [npm](https://www.npmjs.com/): Node.js package manager
-- [jest](https://jestjs.io/): JavaScript testing framework
-- [playwright](https://playwright.dev/): Browser automation library
-- [Prettier](https://prettier.io/): Opinionated code formatter
-- [ESLint](https://eslint.org/): Tool for identifying and reporting on patterns in JavaScript
-- Github Actions workflows for build validation
-It has also been configured to have a productive dev experience out of the box in [VS Code](https://code.visualstudio.com/), see the [.vscode](./.vscode) folder.
-# Integrating with smart contracts and application clients
+AlgoPlayground isn't merely an educational platform; it's a revolutionary odyssey. It replaces the tedium of learning coding with immersive, interactive, and community-driven experiences. This groundbreaking approach to Web3 coding education has the potential to redefine the learning landscape in our rapidly evolving technological sphere. Join the AlgoPlayground community today and embark on this exhilarating journey in blockchain coding education. Together, let's redefine how we learn and evolve as developers.
 
-Refer to the detailed guidance on [integrating with smart contracts and application clients](./src/contracts/README.md). In essence, for any smart contract codebase generated with AlgoKit or other tools that produce compile contracts into ARC34 compliant app specifications, you can use the `algokit generate` command to generate TypeScript or Python typed client. Once generated simply drag and drop the generated client into `./src/contracts` and import it into your React components as you see fit.
+## Try out
 
+[https://algo-code.netlify.app/](https://algo-code.netlify.app/)
