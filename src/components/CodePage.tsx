@@ -1,16 +1,16 @@
-import axios from 'axios'
-import https from 'https'
+// import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import api from '../utils/api'
 import { classnames } from '../utils/general'
 import CodeEditorWindow from './CodeEditorWindow'
 import OutputWindow from './OutputWindow'
 
-const httpsAgent = new https.Agent({
-  rejectUnauthorized: false,
-})
-axios.defaults.httpsAgent = httpsAgent
+// const httpsAgent = new https.Agent({
+//   rejectUnauthorized: false,
+// })
+// axios.defaults.httpsAgent = httpsAgent
 
 const typescriptDefault: string = `import { Contract } from '@algorandfoundation/tealscript';
 
@@ -139,9 +139,10 @@ const CodePage: React.FC = () => {
     //   },
     //   data: formData,
     // }
-    axios
+    // axios
+    api
       // .request(options)
-      .post('https://178.63.14.81:21558/api/v1/execute-code-test', formData)
+      .post('/api/v1/execute-code-test', formData)
       .then(function (response) {
         console.log('res.data', response.data)
         const statusId = response.data.status
